@@ -18,6 +18,8 @@ namespace airbnb.Utilities
         public const string LoadHebergement = "loadHebergement";
         //Contient les details d'un hebergement
         public const string DetailsHebergement = "detailsHebergements";
+        //Contient l'id d'une adresse
+        public const string idAdresse = "";
 
         //Variable de Page :
         //Contient les nom des différentes pages du site: Page*
