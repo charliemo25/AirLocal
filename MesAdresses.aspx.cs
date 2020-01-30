@@ -4,6 +4,7 @@ using airbnb.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -36,6 +37,9 @@ namespace airbnb
 
         protected void btnModifier_Click(object sender, EventArgs e)
         {
+            StringBuilder formModifier = new StringBuilder();
+
+            //Construction du formulaire avec les infos de l'adresse sélectionnée
 
         }
 
