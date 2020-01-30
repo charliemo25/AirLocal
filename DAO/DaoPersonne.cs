@@ -431,5 +431,26 @@ namespace airbnb.DAO
             }
         }
 
+        public void DeleteAdresse(Personne personne, int idAdresse)
+        {
+            try
+            {
+                SqlParameter[] sqlParameters = {
+                    new SqlParameter("@idPersonne", personne.IdPersonne),
+                    new SqlParameter("@idAdresse", idAdresse),
+                };
+
+                //Execution de l'operation sql qui renvoie un tableau
+                //Les données sont stockées dans un objet de type DataReader
+                base.ExecuteQuery("sp_DeleteAdresse", sqlParameters);
+
+                base.sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
