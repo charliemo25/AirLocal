@@ -383,7 +383,7 @@ namespace airbnb.DAO
 
                         //Liste d'adresse de la personne
                         adresse.IdAdresse = (int)sqlDataReader["IdAdresse"];
-                        adresse.NomAdresse = sqlDataReader["Nom"].ToString();
+                        adresse.NomAdresse = sqlDataReader["NomAdresse"].ToString();
                         adresse.Numero = sqlDataReader["Numero"].ToString();
                         adresse.Voie = sqlDataReader["Voie"].ToString();
                         adresse.CodePostal = sqlDataReader["CodePostal"].ToString();

@@ -1,4 +1,5 @@
 ﻿using airbnb.Class;
+using airbnb.DAO;
 using airbnb.Utilities;
 using System;
 using System.Collections.Generic;
@@ -45,7 +46,11 @@ namespace airbnb
 
         protected void btnAjouter_Click(object sender, EventArgs e)
         {
-
+            new DaoPersonne().AddAdresse(user, txtNomAdresse.Text, txtNumero.Text, txtVoie.Text, txtCP.Text, txtVille.Text);
+            
+            //On réassigne les adresses à l'utilisateur
+            user.Adresse = new DaoPersonne().GetClientAdresses(user);
+            Response.Redirect(Constant.PageMesAdresses);
         }
     }
 }
