@@ -151,6 +151,7 @@
     <Content Include="images\location3.jpg" />
     <Content Include="ListHebergements.aspx" />
     <Content Include="MesAdresses.aspx" />
+    <Content Include="ModifierAdresse.aspx" />
     <Content Include="Paiement.aspx" />
     <Content Include="Reservations.aspx" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
@@ -481,6 +482,13 @@
     </Compile>
     <Compile Include="MesAdresses.aspx.designer.cs">
       <DependentUpon>MesAdresses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierAdresse.aspx.cs">
+      <DependentUpon>ModifierAdresse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifierAdresse.aspx.designer.cs">
+      <DependentUpon>ModifierAdresse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paiement.aspx.cs">
       <DependentUpon>Paiement.aspx</DependentUpon>

@@ -9,7 +9,7 @@
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-adresse-tab" data-toggle="pill" href="#v-pills-adresse" role="tab" aria-controls="v-pills-adresse" aria-selected="true">Mes adresses</a>
                     <a class="nav-link" id="v-pills-ajout-tab" data-toggle="pill" href="#v-pills-ajout" role="tab" aria-controls="v-pills-ajout" aria-selected="false">Ajouter une adresse</a>
-                    <a class="nav-link" id="v-pills-modifier-tab btnModifier" href="#v-pills-modifier" role="tab" aria-controls="v-pills-modifier" aria-selected="false">Modifier une adresse</a>
+                    <%--<a class="nav-link" id="v-pills-modifier-tab btnModifier" href="#v-pills-modifier" role="tab" aria-controls="v-pills-modifier" aria-selected="false">Modifier une adresse</a>--%>
                 </div>
             </div>
             <!-- Contenu -->
@@ -72,15 +72,43 @@
                         </div>
                     </div>
                     <!-- Modification d'une adresse -->
-                    <div class="tab-pane fade modifier" id="v-pills-modifier" role="tabpanel" aria-labelledby="v-pills-modifier-tab">
-                        Modifier
-                    </div>
+                    <%--<div class="tab-pane fade modifier" id="v-pills-modifier" role="tabpanel" aria-labelledby="v-pills-modifier-tab">
+                        <div class="formulaire d-flex flex-column align-items-center ">
+                            <!-- Nom de l'adresse-->
+                            <div class="form-group ">
+                                <label for="txtNomAdresse">Nom de l'adresse</label>
+                                <asp:TextBox ID="txtNomAdresseModif" runat="server" Text="" class="form-control"></asp:TextBox>
+                            </div>
+                            <!-- Numero -->
+                            <div class="form-group ">
+                                <label for="txtNumero">Numéro de l'adresse</label>
+                                <asp:TextBox ID="txtNumModif" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <!-- Voie -->
+                            <div class="form-group ">
+                                <label for="txtVoie">Voie</label>
+                                <asp:TextBox ID="txtVoieModif" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <!-- Code Postal -->
+                            <div class="form-group ">
+                                <label for="txtCP">Code Postal</label>
+                                <asp:TextBox ID="txtCpModif" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <!-- Ville -->
+                            <div class="form-group ">
+                                <label for="txtVille">Ville</label>
+                                <asp:TextBox ID="txtVilleModif" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <asp:Button ID="btnValidModif" class="btn btn-primary" runat="server" Text="Valider" CommandArgument="true" OnClick="btnAjouter_Click" />
+                        </div>
+                    </div>--%>
                 </div>
             </div>
         </div>
     </section>
     <script type="text/javascript">
-        $(document).ready(function () {
+
+        <%--$(document).ready(function () {
 
 
             var isModifier = null;
@@ -115,14 +143,14 @@
                 }
 
                 //Gerer le click
-                console.log(this.className);
-
+                console.log($("#<%=  %>"));
+                
 
             });
 
             //Activation manuelle d'une tab
             //$(this).tab('show');
 
-        });
+        });--%>
     </script>
 </asp:Content>
