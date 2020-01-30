@@ -405,5 +405,31 @@ namespace airbnb.DAO
 
             return listeAdresses;
         }
+
+        public void AddAdresse(Personne personne, string nomAdresse, string numero, string voie, string cp, string ville)
+        {
+            try
+            {
+                SqlParameter[] sqlParameters = {
+                    new SqlParameter("@idPersonne", personne.IdPersonne),
+                    new SqlParameter("@nomAdresse", nomAdresse),
+                    new SqlParameter("@numero", numero),
+                    new SqlParameter("@voie", voie),
+                    new SqlParameter("@cp", cp),
+                    new SqlParameter("@ville", ville)
+                };
+
+                //Execution de l'operation sql qui renvoie un tableau
+                //Les données sont stockées dans un objet de type DataReader
+                base.ExecuteQuery("sp_AddAdresse", sqlParameters);
+
+                base.sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

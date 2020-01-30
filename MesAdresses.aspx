@@ -57,7 +57,21 @@
                                 <label for="txtNumero">Numéro de l'adresse</label>
                                 <asp:TextBox ID="txtNumero" runat="server"  Text="" CssClass="form-control"></asp:TextBox>
                             </div>
-
+                            <!-- Voie -->
+                            <div class="form-group ">
+                                <label for="txtVoie">Voie</label>
+                                <asp:TextBox ID="txtVoie" runat="server"  Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <!-- Code Postal -->
+                            <div class="form-group ">
+                                <label for="txtCP">Code Postal</label>
+                                <asp:TextBox ID="txtCP" runat="server"  Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
+                            <!-- Ville -->
+                            <div class="form-group ">
+                                <label for="txtVille">Ville</label>
+                                <asp:TextBox ID="txtVille" runat="server"  Text="" CssClass="form-control"></asp:TextBox>
+                            </div>
                             <asp:Button ID="btnAjouter" class="btn btn-primary" runat="server" Text="Ajouter une adresse" OnClick="btnAjouter_Click" />
                         </div>
                     </div>
