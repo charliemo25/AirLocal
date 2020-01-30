@@ -9,7 +9,7 @@
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-adresse-tab" data-toggle="pill" href="#v-pills-adresse" role="tab" aria-controls="v-pills-adresse" aria-selected="true">Mes adresses</a>
                     <a class="nav-link" id="v-pills-ajout-tab" data-toggle="pill" href="#v-pills-ajout" role="tab" aria-controls="v-pills-ajout" aria-selected="false">Ajouter une adresse</a>
-                    <a class="nav-link" id="v-pills-modifier-tab btnModifier"   href="#v-pills-modifier" role="tab" aria-controls="v-pills-modifier" aria-selected="false">Modifier une adresse</a>
+                    <a class="nav-link" id="v-pills-modifier-tab btnModifier" href="#v-pills-modifier" role="tab" aria-controls="v-pills-modifier" aria-selected="false">Modifier une adresse</a>
                 </div>
             </div>
             <!-- Contenu -->
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <!-- Modification d'une adresse -->
-                   <div class="tab-pane fade modifier" id="v-pills-modifier" role="tabpanel" aria-labelledby="v-pills-modifier-tab">
+                    <div class="tab-pane fade modifier" id="v-pills-modifier" role="tabpanel" aria-labelledby="v-pills-modifier-tab">
                         Modifier
                     </div>
                 </div>
@@ -82,17 +82,46 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+
+            var isModifier = null;
+
             //Ciblage du lien d'activation de la tab
             $('#AdresseTab div a[href="#v-pills-modifier"]').click(function (e) {
-                
+
+                //desactive l'action par défaut du lien
                 e.preventDefault();
+                console.log(isModifier);
+                //Application d'un focus au clic sur modifier
+                $(".cardAdresse").addClass("focus");
 
-                //Activation manuelle d'une tab
-                //$(this).tab('show');
+                if (!isModifier) {
+                    $(".cardAdresse").click();
+                }
 
+                //Changement de l'etat de la modification
+                isModifier = (isModifier == null) ? false : isModifier = !isModifier;
 
 
             });
+
+            $(".cardAdresse").click(function () {
+
+                //Supprime le focus
+                if (!isModifier && isModifier != null) {
+                    
+                    //reset de la classe
+                    $(".cardAdresse").removeClass("focus");
+
+                }
+
+                //Gerer le click
+                console.log(this.className);
+
+
+            });
+
+            //Activation manuelle d'une tab
+            //$(this).tab('show');
 
         });
     </script>
