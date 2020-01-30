@@ -14,8 +14,8 @@ namespace airbnb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if(user != null)
+
+            if (user != null)
             {
                 //Afficher les adresses
                 if (!IsPostBack)
@@ -42,14 +42,17 @@ namespace airbnb
         protected void btnSupprimer_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(((Button)sender).CommandArgument);
-
             new DaoPersonne().DeleteAdresse(user, id);
+
+            //On réassigne les adresses à l'utilisateur
+            user.Adresse = new DaoPersonne().GetClientAdresses(user);
+            Response.Redirect(Constant.PageMesAdresses);
         }
 
         protected void btnAjouter_Click(object sender, EventArgs e)
         {
             new DaoPersonne().AddAdresse(user, txtNomAdresse.Text, txtNumero.Text, txtVoie.Text, txtCP.Text, txtVille.Text);
-            
+
             //On réassigne les adresses à l'utilisateur
             user.Adresse = new DaoPersonne().GetClientAdresses(user);
             Response.Redirect(Constant.PageMesAdresses);
