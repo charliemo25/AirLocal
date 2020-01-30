@@ -32,7 +32,7 @@
                                         <div class="col-md-4">
                                             <div class="d-flex flex-column align-items-center">
                                                 <asp:Button ID="btnModifier" CssClass="btn btn-primary m-2" runat="server" Text="Modifier" OnClick="btnModifier_Click" />
-                                                <asp:Button ID="btnSupprimer" CssClass="btn btn-danger m-2" runat="server" Text="Supprimer" OnClick="btnSupprimer_Click" />
+                                                <asp:Button ID="btnSupprimer" CssClass="btn btn-danger m-2" runat="server" Text="Supprimer" CommandArgument="<%# Eval("IdAdresse")%>" OnClick="btnSupprimer_Click" />
                                             </div>
                                         </div>
                                     </div>

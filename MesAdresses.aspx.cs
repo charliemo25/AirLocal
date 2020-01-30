@@ -41,7 +41,9 @@ namespace airbnb
 
         protected void btnSupprimer_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(((Button)sender).CommandArgument);
 
+            new DaoPersonne().DeleteAdresse(user, id);
         }
 
         protected void btnAjouter_Click(object sender, EventArgs e)
