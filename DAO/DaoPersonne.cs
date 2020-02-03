@@ -452,5 +452,30 @@ namespace airbnb.DAO
             }
         }
 
+        public void UpdateAdresse(Adresse adresse)
+        {
+            try
+            {
+                SqlParameter[] sqlParameters = {
+                    new SqlParameter("@idAdresse", adresse.IdAdresse),
+                    new SqlParameter("@nomAdresse", adresse.NomAdresse),
+                    new SqlParameter("@numero", adresse.Numero),
+                    new SqlParameter("@voie", adresse.Voie),
+                    new SqlParameter("@cp", adresse.CodePostal),
+                    new SqlParameter("@ville", adresse.Ville),
+                };
+
+                //Execution de l'operation sql qui renvoie un tableau
+                //Les données sont stockées dans un objet de type DataReader
+                base.ExecuteQuery("sp_UpdateAdresse", sqlParameters);
+
+                base.sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
