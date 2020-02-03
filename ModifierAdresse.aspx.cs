@@ -13,7 +13,12 @@ namespace airbnb
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(Session[Constant.idAdresse]);
-            
+         
+            if(id == 0)
+            {
+                Response.Redirect(Constant.PageMesAdresses);
+            }
+
             var Adresse = user.Adresses.First(x => x.IdAdresse == id);
 
             //Assigner les valeurs au formulaire
