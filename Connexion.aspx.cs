@@ -34,7 +34,7 @@ namespace airbnb
                     //Récupération des liste contenus dans personne
                     personne.Favoris = daoPersonne.GetClientFavoris(personne);
                     personne.Reservations = daoPersonne.GetClientReservations(personne);
-                    personne.Adresse = daoPersonne.GetClientAdresses(personne);
+                    personne.Adresses = daoPersonne.GetClientAdresses(personne);
 
                     Session[Constant.UtilisateurSession] = personne;
                     Response.Redirect(Constant.PageReservations);

@@ -18,14 +18,14 @@ namespace airbnb.Class
         public bool Status { get; set; }
 
         public List<Hebergement> Favoris { get; set; }
-        public List<Adresse> Adresse {get; set;}
+        public List<Adresse> Adresses {get; set;}
         public List<Reservation> Reservations { get; set; }
 
 
         public Personne()
         {
             Favoris = new List<Hebergement>();
-            Adresse = new List<Adresse>();
+            Adresses = new List<Adresse>();
             Reservations = new List<Reservation>();
         }
 

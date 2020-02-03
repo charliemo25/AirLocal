@@ -22,7 +22,7 @@ namespace airbnb
                 if (!IsPostBack)
                 {
                     //Utiliser une listView
-                    lvwAdresses.DataSource = user.Adresse;
+                    lvwAdresses.DataSource = user.Adresses;
                     lvwAdresses.DataBind();
                 }
 
@@ -41,6 +41,10 @@ namespace airbnb
 
             //Construction du formulaire avec les infos de l'adresse sélectionnée
 
+            int id = Convert.ToInt32(((Button)sender).CommandArgument);
+            Session[Constant.idAdresse] = id;
+            Response.Redirect(Constant.PageModifierAdresse);
+
         }
 
         protected void btnSupprimer_Click(object sender, EventArgs e)
@@ -49,7 +53,7 @@ namespace airbnb
             new DaoPersonne().DeleteAdresse(user, id);
 
             //On réassigne les adresses à l'utilisateur
-            user.Adresse = new DaoPersonne().GetClientAdresses(user);
+            user.Adresses = new DaoPersonne().GetClientAdresses(user);
             Response.Redirect(Constant.PageMesAdresses);
         }
 
@@ -58,7 +62,7 @@ namespace airbnb
             new DaoPersonne().AddAdresse(user, txtNomAdresse.Text, txtNumero.Text, txtVoie.Text, txtCP.Text, txtVille.Text);
 
             //On réassigne les adresses à l'utilisateur
-            user.Adresse = new DaoPersonne().GetClientAdresses(user);
+            user.Adresses = new DaoPersonne().GetClientAdresses(user);
             Response.Redirect(Constant.PageMesAdresses);
         }
     }

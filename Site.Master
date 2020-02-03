@@ -4,7 +4,7 @@
 
 <html lang="fr">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Mon ASP.NET Application</title>
@@ -13,35 +13,36 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    
+
 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3">
-            <a class="navbar-brand" runat="server" href="~/">
-                <img src="images/airlocal.svg" alt="Alternate Text" width="25" height="25" /> AirLocal</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" runat="server" href="~/">Accueil</a>
-                    <a class="nav-item nav-link" runat="server" href="~/ListHebergements">Liste des hebergements</a>
-                    <!-- a mettre dans le literal -->
-                    <a class="nav-item nav-link" runat="server" href="~/Favoris">Favoris</a>
-                    <a class="nav-item nav-link" runat="server" href="~/Reservations">Reservations</a>
-                    <a class="nav-item nav-link" runat="server" href="~/CreerHebergement">Créer un hebergement</a>
-                    <a class="nav-item nav-link" runat="server" href="~/Compte">Profil</a>
-                    <a class='nav-item nav-link' runat='server' href='~/MesAdresses'>Mes Adresses</a>
+        <a class="navbar-brand" runat="server" href="~/">
+            <img src="images/airlocal.svg" alt="Alternate Text" width="25" height="25" />
+            AirLocal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" runat="server" href="~/">Accueil</a>
+                <a class="nav-item nav-link" runat="server" href="~/ListHebergements">Liste des hebergements</a>
+                <!-- a mettre dans le literal -->
+                <a class="nav-item nav-link" runat="server" href="~/Favoris">Favoris</a>
+                <a class="nav-item nav-link" runat="server" href="~/Reservations">Reservations</a>
+                <a class="nav-item nav-link" runat="server" href="~/CreerHebergement">Créer un hebergement</a>
+                <a class="nav-item nav-link" runat="server" href="~/Compte">Profil</a>
+                <a class='nav-item nav-link' runat='server' href='~/MesAdresses'>Mes Adresses</a>
 
-                </div>
-                <div class="navbar-nav ml-auto">
-                    <asp:Literal ID="ltUser" runat="server"></asp:Literal>
-                </div>
             </div>
-        </nav>
+            <div class="navbar-nav ml-auto">
+                <asp:Literal ID="ltUser" runat="server"></asp:Literal>
+            </div>
+        </div>
+    </nav>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -63,10 +64,9 @@
             </Scripts>
         </asp:ScriptManager>
 
-        
+
         <div class="container-fluid body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-
             </asp:ContentPlaceHolder>
             <hr />
             <footer>

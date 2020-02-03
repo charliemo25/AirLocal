@@ -12,6 +12,12 @@ namespace airbnb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(Session[Constant.idAdresse]);
+            
+            //var Adresse = user.Adresses.Where(x => x.IdAdresse == id);
+            var Adresse = from x in user.Adresses
+                          where x.IdAdresse == id
+                          select x;
 
         }
 

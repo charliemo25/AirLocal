@@ -32,6 +32,7 @@ namespace airbnb.Utilities
         public const string PageCompte = "Compte.aspx";
         public const string PagePaiement = "Paiement.aspx";
         public const string PageMesAdresses = "MesAdresses.aspx";
+        public const string PageModifierAdresse = "ModifierAdresse";
 
     }
 }
