@@ -9,7 +9,7 @@ namespace airbnb.Utilities
     {
 
         //Connexion à la base de données
-        public const string connectionString = @"Data Source=LOCALHOST\SQLEXPRESS;Initial Catalog=AirLocal;Integrated Security=True";
+        public const string connectionString = @"Data Source=localhost\sqlexpress;Initial Catalog=AirLocal;Persist Security Info=True;User ID=sa;password=1234";
 
         //Variable de Session :
         //Session de l'utilisateur avec ses favors, ses réservations et sa liste d'adresses
