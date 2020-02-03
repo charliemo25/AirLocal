@@ -14,10 +14,14 @@ namespace airbnb
         {
             int id = Convert.ToInt32(Session[Constant.idAdresse]);
             
-            //var Adresse = user.Adresses.Where(x => x.IdAdresse == id);
-            var Adresse = from x in user.Adresses
-                          where x.IdAdresse == id
-                          select x;
+            var Adresse = user.Adresses.First(x => x.IdAdresse == id);
+
+            //Assigner les valeurs au formulaire
+            txtNomAdresse.Text = Adresse.NomAdresse;
+            txtNumero.Text = Adresse.Numero;
+            txtVoie.Text = Adresse.Voie;
+            txtCP.Text = Adresse.CodePostal;
+            txtVille.Text = Adresse.Ville;
 
         }
 
