@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <section class="container border shadow mt-5 mb-5">
+    <section class="container border shadow mt-5 mb-5 ">
         <div class="row p-3">
             <!-- Lien -->
             <div class="col-3" id="AdresseTab">
